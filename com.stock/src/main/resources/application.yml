@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/db_stock
+    username: postgres
+    password: hamza
+    driver-class-name: org.postgresql.Driver
+  #    url: jdbc:mysql://localhost:3306/db_stock?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+  #    username: root
+  #    password: root
+  #    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    #    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+
+springdoc:
+  api-docs:
+    path: /api-stock
+  
